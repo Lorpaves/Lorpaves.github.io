@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>如何在MacOS上彻底地卸载Python &middot; Lorpaves</title>
+  <meta name="description" content="假定当前电脑的Python版本为3.7，现在要用已经下载的3.9（新的）版本替换掉3.7（原先的）版本。" />
+  <meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lorpaves">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://lorpaves.github.io/posts/mac%E5%A6%82%E4%BD%95%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BDpython/">
+<meta property="og:site_name" content="Lorpaves">
+<meta property="og:image" content="https://lorpaves.github.io">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lorpaves">
+<meta name="twitter:description" content="">
+<meta name="twitter:site" content="https://lorpaves.github.io">
+<meta name="twitter:creator" content="">
+<meta name="twitter:image" content="https://lorpaves.github.io">
+
+  <link href="https://lorpaves.github.io/css/katex.css" rel="stylesheet">
+  
+  
+  
+  
+  <link href="https://lorpaves.github.io/css/concated.min.css" rel="stylesheet">
+  
+  
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://lorpaves.github.io" class="nav-text">Lorpaves</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://lorpaves.github.io" class="hamburger-menu-overlay-link">Home</a></li>
+      <li><a href="https://lorpaves.github.io/about/" class="hamburger-menu-overlay-link">About Me</a></li>
+      
+      <li><a href="https://lorpaves.github.io/categories/programming/" class="hamburger-menu-overlay-link">Programming</a></li>
+      
+      <li><a href="https://lorpaves.github.io/categories/reading-notes/" class="hamburger-menu-overlay-link">Reading Notes</a></li>
+      
+      <li><a href="https://lorpaves.github.io/categories/thoughts/" class="hamburger-menu-overlay-link">Thoughts</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post dropcase">
+        <header class="post-header">
+          <h1 class="post-title">如何在MacOS上彻底地卸载Python</h1>
+          <p class="post-date">Posted <time datetime="2021-02-08">Feb 8, 2021</time></p>
+        </header>
+        <picture class="post-figure">
+          
+          
+          
+          <source srcset="https://lorpaves.github.io/posts/mac%E5%A6%82%E4%BD%95%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BDpython/uninstall%20python_huc7643dbb7800d9700f63019d76947b71_695959_711x0_resize_q75_lanczos.jpeg 1x, https://lorpaves.github.io/posts/mac%E5%A6%82%E4%BD%95%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BDpython/uninstall%20python_huc7643dbb7800d9700f63019d76947b71_695959_1422x0_resize_q75_lanczos.jpeg 2x, https://lorpaves.github.io/posts/mac%E5%A6%82%E4%BD%95%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BDpython/uninstall%20python_huc7643dbb7800d9700f63019d76947b71_695959_2133x0_resize_q75_lanczos.jpeg 3x">
+          <img src="https://lorpaves.github.io/posts/mac%E5%A6%82%E4%BD%95%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BDpython/uninstall%20python_huc7643dbb7800d9700f63019d76947b71_695959_711x0_resize_q75_lanczos.jpeg" >
+        </picture>
+        
+        
+        <h1 id="如何在macos上彻底地卸载python">如何在MacOS上彻底地卸载Python</h1>
+<h3 id="问题"><strong>问题:</strong></h3>
+<p>如果你现在的Python的版本存在问题（比如Python的3.7版本）然后你想下载另一个版本（例如3.9最新版本）。为了下载一个全新的版本你需要先卸载当前的版本。</p>
+<h3 id="解决方法"><strong>解决方法:</strong></h3>
+<p>假定当前电脑的Python版本为3.7，现在要用已经下载的3.9（新的）版本替换掉3.7（原先的）版本。</p>
+<p>按照以下三步来</p>
+<ol>
+<li>
+<p>移除Python3.7第三方构架(framework of the third-party)</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo rm -rf /Library/Frameworks/Python.framework/Versions/3.7
+</code></pre></div></li>
+<li>
+<p>移除应用里的Python目录</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo rm -rf <span style="color:#cd5555">&#34;/Applications/Python 3.7&#34;</span>
+</code></pre></div></li>
+<li>
+<p>移除指向现在版本的Python的符号链接（<a href="https://zh.wikipedia.org/wiki/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5">symbolic links</a>），在 <strong>/usr/local/bin</strong> 里</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls -l /usr/local/bin | grep <span style="color:#cd5555">&#39;../Library/Frameworks/Python.framework/Versions/3.7&#39;</span>
+</code></pre></div><p>然后输入以下命令来移除所有链接:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#658b00">cd</span> /usr/local/bin/
+$ ls -l /usr/local/bin | grep <span style="color:#cd5555">&#39;../Library/Frameworks/Python.framework/Versions/3.7&#39;</span> | awk <span style="color:#cd5555">&#39;{print $9}&#39;</span> | tr -d @ | xargs rm
+</code></pre></div></li>
+</ol>
+<h3 id="下载新的版本">下载新的版本:</h3>
+<ul>
+<li>
+<ol>
+<li>在<a href="https://www.python.org/downloads/mac-osx/">官网</a>页面，选择要下载的版本进行下载安装。</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>验证是否安装成功: <code> $ python3 -version</code></li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>安装<a href="https://brew.sh/">Homebrew</a></li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>安装 virtualenv</li>
+</ol>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip3 install virtualenv
+$ pip3 install virtualenvwrapper
+</code></pre></div></li>
+<li>
+<ol start="5">
+<li>创建并激活Python的Virtual Environment</li>
+</ol>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#658b00">cd</span> /Users/admin/Downloads/training_model/model 
+$ python3 -m virtualenv /Users/admin/Downloads/training_model/model
+$ <span style="color:#658b00">source</span> bin/activate
+</code></pre></div></li>
+</ul>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://lorpaves.github.io/posts/%E7%9E%8E%E8%B0%88/" class="card blog-card bc-next" rel="bookmark" >
+  
+  <div class="card-img-container">
+    <p class="card-img-overlay">Next Article</p>
+    <picture>
+      
+      
+      
+      <source srcset="https://lorpaves.github.io/posts/%E7%9E%8E%E8%B0%88/%E7%9E%8E%E8%B0%88_hu8d4bcffa945cbdfdf851698c9d594030_54883_400x0_resize_q75_lanczos.jpg 1x, https://lorpaves.github.io/posts/%E7%9E%8E%E8%B0%88/%E7%9E%8E%E8%B0%88_hu8d4bcffa945cbdfdf851698c9d594030_54883_800x0_resize_q75_lanczos.jpg 2x, https://lorpaves.github.io/posts/%E7%9E%8E%E8%B0%88/%E7%9E%8E%E8%B0%88_hu8d4bcffa945cbdfdf851698c9d594030_54883_1200x0_resize_q75_lanczos.jpg 3x">
+      <img src="https://lorpaves.github.io/posts/%E7%9E%8E%E8%B0%88/%E7%9E%8E%E8%B0%88_hu8d4bcffa945cbdfdf851698c9d594030_54883_400x0_resize_q75_lanczos.jpg" class="card-img" >
+    </picture>
+  </div>
+  
+  <article class="card-body">
+    <h2 class="card-title">瞎谈</h2>
+    <p class="card-text">生活本来就够乱了，每天看到媒体报道的各种混乱的新闻，心里更乱了。铺天盖地的信息，我觉得不是处不处理得好的问题，而是这些信息背后真正表达的是什么。</p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2021-02-07 27:00">Feb 7, 2021</time></p>
+      <p>#Thoughts </p>
+    </div>
+  </article>
+</a>
+      
+    </nav>
+    <footer class="side-padding" style="background-image: url('https://lorpaves.github.io/img/home-blob-flip.svg');">
+    <a href="https://lorpaves.github.io" class="footer-link">
+    
+        <img class="footer-icon" src="https://lorpaves.github.io/icons/home-page.png">
+    
+    </a>
+    
+    <a href="https://github.com/lorpaves" class="footer-link">
+    
+        <img class="footer-icon" src="https://lorpaves.github.io/icons/github.png" />
+    
+    </a>
+    
+    
+</footer> 
+    
+  <script defer src="https://lorpaves.github.io/js/katex.js"></script>
+
+
+  <script defer src="https://lorpaves.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+
+
+<script src="https://lorpaves.github.io/js/core.min.js"></script>
+
+  </body>
+</html>
