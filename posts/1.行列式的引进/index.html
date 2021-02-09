@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>行列式概念的引进 &middot; Lorpaves</title>
+  <meta name="description" content="仔细观察上面方程组的每一项和方程组对于的解，其解很难被人们记住，那么为了便于解方程组，即为了更好地记忆方程组的解，数学家们引进的一种计算符号，称之为行列式。" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://lorpaves.github.io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://lorpaves.github.io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://lorpaves.github.io/favicon-16x16.png">
+  <link rel="manifest" href="https://lorpaves.github.io/site.webmanifest">
+  <link rel="mask-icon" href="https://lorpaves.github.io/safari-pinned-tab.svg" color="#5bbad5">
+  <meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lorpaves">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://lorpaves.github.io/posts/1.%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%BC%95%E8%BF%9B/">
+<meta property="og:site_name" content="Lorpaves">
+<meta property="og:image" content="https://lorpaves.github.io">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lorpaves">
+<meta name="twitter:description" content="">
+<meta name="twitter:site" content="https://lorpaves.github.io">
+<meta name="twitter:creator" content="">
+<meta name="twitter:image" content="https://lorpaves.github.io">
+
+  <link href="https://lorpaves.github.io/css/katex.css" rel="stylesheet">
+  
+  
+  
+  
+  <link href="https://lorpaves.github.io/css/concated.min.css" rel="stylesheet">
+  
+  
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://lorpaves.github.io" class="nav-text">Lorpaves</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://lorpaves.github.io" class="hamburger-menu-overlay-link">Home</a></li>
+      <li><a href="https://lorpaves.github.io/about/" class="hamburger-menu-overlay-link">About Me</a></li>
+      
+      <li><a href="https://lorpaves.github.io/categories/math/" class="hamburger-menu-overlay-link">Math</a></li>
+      
+      <li><a href="https://lorpaves.github.io/categories/notes/" class="hamburger-menu-overlay-link">Notes</a></li>
+      
+      <li><a href="https://lorpaves.github.io/categories/programming/" class="hamburger-menu-overlay-link">Programming</a></li>
+      
+      <li><a href="https://lorpaves.github.io/categories/reading-notes/" class="hamburger-menu-overlay-link">Reading Notes</a></li>
+      
+      <li><a href="https://lorpaves.github.io/categories/thoughts/" class="hamburger-menu-overlay-link">Thoughts</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post dropcase">
+        <header class="post-header">
+          <h1 class="post-title">行列式概念的引进</h1>
+          <p class="post-date">Posted <time datetime="2021-02-09">Feb 9, 2021</time></p>
+        </header>
+        <picture class="post-figure">
+          
+          
+          
+          <source srcset="https://lorpaves.github.io/posts/1.%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%BC%95%E8%BF%9B/algebra_hu0554b2fe7bffe6f507f97e3011cec573_148454_711x0_resize_q75_lanczos.jpeg 1x, https://lorpaves.github.io/posts/1.%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%BC%95%E8%BF%9B/algebra_hu0554b2fe7bffe6f507f97e3011cec573_148454_1422x0_resize_q75_lanczos.jpeg 2x, https://lorpaves.github.io/posts/1.%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%BC%95%E8%BF%9B/algebra_hu0554b2fe7bffe6f507f97e3011cec573_148454_2133x0_resize_q75_lanczos.jpeg 3x">
+          <img src="https://lorpaves.github.io/posts/1.%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%BC%95%E8%BF%9B/algebra_hu0554b2fe7bffe6f507f97e3011cec573_148454_711x0_resize_q75_lanczos.jpeg" >
+        </picture>
+        
+        
+        <h1 id="行列式概念的引进">行列式概念的引进</h1>
+
+<p><span  class="math">\[\left\{\begin{matrix}
+ a_{11}x_{1}+a_{12}x_{1}=b_{1}& L_{1}\\ 
+ a_{21}x_{2}+a_{22}x_{2}=b_{2}&  L_{2}
+\end{matrix}\right.
+\]</span></p>
+
+<h2 id="1-高斯消元法httpszhwikipediaorgwiki高斯消去法1解多元一次方程组">1. <a href="https://zh.wikipedia.org/wiki/高斯消去法">高斯消元法</a><sup class="footnote-ref" id="fnref:1"><a class="footnote" href="#fn:1">1</a></sup>解多元一次方程组</h2>
+
+<p>只要<span  class="math">\(\frac{a_{11}}{a_{12}}\neq \frac{a_{21}}{a_{22}}\)</span>   即  <span  class="math">\(a_{11}a_{22}-a_{12}a_{21}\neq 0\)</span> ；就可以用高斯消元法解</p>
+
+<p><strong>解：</strong></p>
+
+<p><strong>先解出<span  class="math">\(x_{1}\)</span>：</strong></p>
+
+<p>消去<span  class="math">\(x_{2}\)</span>： <span  class="math">\(a_{22}L_{1}-a_{12}L_{2}\)</span></p>
+
+<p>得： <span  class="math">\(a_{11}a_{22}x_{1}-a_{12}a_{21}x_{1}=a_{22}b_{1}-a_{12}b_{2}\)</span></p>
+
+<p><span  class="math">\(\therefore x_{1}=\frac{a_{22}b_{1}-a_{12}b_{2}}{a_{11}a_{22}-a_{12}a_{21}}\)</span>   (分母不为0)</p>
+
+<p>如果把<span  class="math">\(x_{1}\)</span>的解带入方程，计算会很麻烦，所以再用同样的方法求出<span  class="math">\(x_{2}\)</span></p>
+
+<p><strong>再解<span  class="math">\(x_{2}\)</span>：</strong></p>
+
+<p>消去<span  class="math">\(x_{1}\)</span>：<span  class="math">\(a_{21}L_{1}-a_{11}L_{2}\)</span></p>
+
+<p>得： <span  class="math">\(a_{12}a_{21}x_{2}-a_{11}a_{22}x_{2}=a_{21}b_{1}-a_{11}b_{2}\)</span></p>
+
+<p><span  class="math">\(\therefore x_{2}=\frac{a_{11}b_{2}-a_{21}b_{1}}{a_{11}a_{22}-a_{12}a_{21}}\)</span>（分母不为0）</p>
+
+<h2 id="2-为什么要引进行列式">2. 为什么要引进行列式</h2>
+
+<p><span  class="math">\[\left\{\begin{matrix}
+ a_{11}x_{1}+a_{12}x_{1}=b_{1}& L_{1}\\ 
+ a_{21}x_{2}+a_{22}x_{2}=b_{2}&  L_{2}
+\end{matrix}\right.
+\]</span></p>
+
+<p><span  class="math">\[x_{1}=\frac{a_{22}b_{1}-a_{12}b_{2}}{a_{11}a_{22}-a_{12}a_{21}}
+x_{2}=\frac{a_{11}b_{2}-a_{21}b_{1}}{a_{11}a_{22}-a_{12}a_{21}}\]</span></p>
+
+<blockquote>
+<p>仔细观察上面方程组的每一项和方程组对于的解，其解很难被人们记住，那么为了便于解方程组，即为了更好地记忆方程组的解，数学家们引进的一种计算符号，称之为行列式。
+行列式既可以表示<strong>式，</strong>也可以表示<strong>数。</strong></p>
+</blockquote>
+
+<p><span  class="math">\[所以数学家规定:
+\begin{vmatrix}
+a_{11} & a_{12}\\ 
+a_{21} & a_{22}
+\end{vmatrix}=a_{11}a_{22}-a_{12}a_{21}\]</span></p>
+
+<p><span  class="math">\[那么上面方程组的解就可以表示为:
+x_{1}=\frac{\begin{vmatrix}
+b_{1} &a_{12} \\ 
+ b_{2}& a_{22}
+\end{vmatrix}}{\begin{vmatrix}
+a_{11} &a_{12} \\ 
+ a_{21}& a_{22}
+\end{vmatrix}}
+x_{2}=\frac{\begin{vmatrix}
+a_{11} &b_{1} \\ 
+ a_{21}& b_{2}
+\end{vmatrix}}{\begin{vmatrix}
+a_{11} &a_{12} \\ 
+ a_{21}& a_{22}
+\end{vmatrix}}\]</span></p>
+
+<h2 id="3-为什么叫行列式">3. 为什么叫行列式</h2>
+
+<ul>
+<li>有行   <span  class="math">\[a_{11} a_{12} a_{13} ··· a_{1n}\]</span></li>
+<li>有列    <span  class="math">\[a_{11}\]</span> <span  class="math">\[a_{21}\]</span> <span  class="math">\[a_{31}\]</span>  <span  class="math">\[···\]</span>   <span  class="math">\[a_{n1}\]</span></li>
+<li>有式   <span  class="math">\[a_{11}a_{22}-a_{12}a_{21}\]</span></li>
+</ul>
+
+<h2 id="4-为什么叫二阶行列式">4. 为什么叫二阶行列式</h2>
+
+<ul>
+<li><strong>因为有两行两列</strong></li>
+</ul>
+
+<h2 id="5-三阶行列式">5. 三阶行列式</h2>
+
+<p><span  class="math">\[解三元一次方程组
+\left\{\begin{matrix}
+ a_{11}x_{1}+a_{12}x_{1}+a_{13}x_{1}=b_{1}& L_{1}\\ 
+ a_{21}x_{2}+a_{22}x_{2}+a_{23}x_{2}=b_{2}&  L_{2}\\
+a_{31}x_{3}+a_{32}x_{3}+a_{33}x_{3}=b_{3}&  L_{3}
+\end{matrix}\right.
+\]</span></p>
+
+<p>用高斯消元法解后得到的解中含有以下多项式</p>
+
+<p><span  class="math">\[a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{13}a_{22}a_{31}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}\]</span></p>
+
+<p>上式可表示为</p>
+
+<p><span  class="math">\[\begin{vmatrix}
+ a_{11}&  a_{12} & a_{13} \\ 
+  a_{21}& a_{22}  & a_{23} \\ 
+  a_{31}& a_{32}  &  a_{33}
+\end{vmatrix}=a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{13}a_{22}a_{31}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}\]</span></p>
+
+<p>仔细观察上面多项式的每一项，可以看到每项都是由三个元素相乘，这三个元素的下标取自不同行不同列。
+一共有六项</p>
+
+<p>六恰好等于1，2，3这三个数的全排列<sup class="footnote-ref" id="fnref:2"><a class="footnote" href="#fn:2">2</a></sup>，  <span  class="math">\(A_{3}^{3}=6\)</span></p>
+<div class="footnotes">
+
+<hr>
+
+<ol>
+<li id="fn:1"><a href="https://zh.wikipedia.org/wiki/高斯消去法">高斯消元法</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2"><a href="https://baike.baidu.com/item/全排列">全排列</a>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://lorpaves.github.io/posts/basic-terminal-commands/" class="card blog-card bc-next" rel="bookmark" >
+  
+  <div class="card-img-container">
+    <p class="card-img-overlay">Next Article</p>
+    <picture>
+      
+      
+      
+      <source srcset="https://lorpaves.github.io/posts/basic-terminal-commands/bash.001_hu0554b2fe7bffe6f507f97e3011cec573_130284_400x0_resize_q75_lanczos.jpeg 1x, https://lorpaves.github.io/posts/basic-terminal-commands/bash.001_hu0554b2fe7bffe6f507f97e3011cec573_130284_800x0_resize_q75_lanczos.jpeg 2x, https://lorpaves.github.io/posts/basic-terminal-commands/bash.001_hu0554b2fe7bffe6f507f97e3011cec573_130284_1200x0_resize_q75_lanczos.jpeg 3x">
+      <img src="https://lorpaves.github.io/posts/basic-terminal-commands/bash.001_hu0554b2fe7bffe6f507f97e3011cec573_130284_400x0_resize_q75_lanczos.jpeg" class="card-img" >
+    </picture>
+  </div>
+  
+  <article class="card-body">
+    <h2 class="card-title">Basic Macos Terminal Commands</h2>
+    <p class="card-text"></p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2021-02-08 28:00">Feb 8, 2021</time></p>
+      <p>#Programming </p>
+    </div>
+  </article>
+</a>
+      
+    </nav>
+    <footer class="side-padding" style="background-image: url('https://lorpaves.github.io/img/home-blob-flip.svg');">
+    <a href="https://lorpaves.github.io" class="footer-link">
+    
+        <img class="footer-icon" src="https://lorpaves.github.io/icons/home-page.png">
+    
+    </a>
+    
+    <a href="https://github.com/lorpaves" class="footer-link">
+    
+        <img class="footer-icon" src="https://lorpaves.github.io/icons/github.png" />
+    
+    </a>
+    
+    
+</footer> 
+    
+  <script defer src="https://lorpaves.github.io/js/katex.js"></script>
+
+
+  <script defer src="https://lorpaves.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+
+
+<script src="https://lorpaves.github.io/js/core.min.js"></script>
+
+  </body>
+</html>
