@@ -86,18 +86,18 @@
 <ol>
 <li>
 <p>移除Python3.7第三方构架(framework of the third-party)</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo rm -rf /Library/Frameworks/Python.framework/Versions/3.7
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ sudo rm -rf /Library/Frameworks/Python.framework/Versions/3.7
 </code></pre></div></li>
 <li>
 <p>移除应用里的Python目录</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo rm -rf <span style="color:#cd5555">&#34;/Applications/Python 3.7&#34;</span>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ sudo rm -rf <span style="color:#cd5555">&#34;/Applications/Python 3.7&#34;</span>
 </code></pre></div></li>
 <li>
 <p>移除指向现在版本的Python的符号链接（<a href="https://zh.wikipedia.org/wiki/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5">symbolic links</a>），在 <strong>/usr/local/bin</strong> 里</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls -l /usr/local/bin | grep <span style="color:#cd5555">&#39;../Library/Frameworks/Python.framework/Versions/3.7&#39;</span>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ ls -l /usr/local/bin | grep <span style="color:#cd5555">&#39;../Library/Frameworks/Python.framework/Versions/3.7&#39;</span>
 </code></pre></div><p>然后输入以下命令来移除所有链接:</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#658b00">cd</span> /usr/local/bin/
-$ ls -l /usr/local/bin | grep <span style="color:#cd5555">&#39;../Library/Frameworks/Python.framework/Versions/3.7&#39;</span> | awk <span style="color:#cd5555">&#39;{print $9}&#39;</span> | tr -d @ | xargs rm
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ <span style="color:#658b00">cd</span> /usr/local/bin/
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>$ ls -l /usr/local/bin | grep <span style="color:#cd5555">&#39;../Library/Frameworks/Python.framework/Versions/3.7&#39;</span> | awk <span style="color:#cd5555">&#39;{print $9}&#39;</span> | tr -d @ | xargs rm
 </code></pre></div></li>
 </ol>
 <h3 id="下载新的版本">下载新的版本:</h3>
@@ -121,16 +121,16 @@ $ ls -l /usr/local/bin | grep <span style="color:#cd5555">&#39;../Library/Framew
 <ol start="4">
 <li>安装 virtualenv</li>
 </ol>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip3 install virtualenv
-$ pip3 install virtualenvwrapper
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ pip3 install virtualenv
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>$ pip3 install virtualenvwrapper
 </code></pre></div></li>
 <li>
 <ol start="5">
 <li>创建并激活Python的Virtual Environment</li>
 </ol>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#658b00">cd</span> /Users/admin/Downloads/training_model/model 
-$ python3 -m virtualenv /Users/admin/Downloads/training_model/model
-$ <span style="color:#658b00">source</span> bin/activate
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ <span style="color:#658b00">cd</span> /Users/admin/Downloads/training_model/model 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>$ python3 -m virtualenv /Users/admin/Downloads/training_model/model
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>$ <span style="color:#658b00">source</span> bin/activate
 </code></pre></div></li>
 </ul>
 
