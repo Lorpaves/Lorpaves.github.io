@@ -4,11 +4,18 @@
     <link>https://lorpaves.github.io/categories/</link>
     <description>Recent content in Categories on Lorpaves</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 21 Feb 2021 17:21:52 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 06 Mar 2021 22:43:21 +0800</lastBuildDate>
     
         <atom:link href="https://lorpaves.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Notes</title>
+      <link>https://lorpaves.github.io/categories/notes/</link>
+      <pubDate>Sat, 06 Mar 2021 22:43:21 +0800</pubDate>
+      
+      <guid>https://lorpaves.github.io/categories/notes/</guid>
+      <description></description>
+    </item><item>
       <title>Reading List</title>
       <link>https://lorpaves.github.io/categories/reading-list/</link>
       <pubDate>Sun, 21 Feb 2021 17:21:52 +0800</pubDate>
@@ -28,13 +35,6 @@
       <pubDate>Tue, 09 Feb 2021 14:27:44 +0800</pubDate>
       
       <guid>https://lorpaves.github.io/categories/math/</guid>
-      <description></description>
-    </item><item>
-      <title>Notes</title>
-      <link>https://lorpaves.github.io/categories/notes/</link>
-      <pubDate>Tue, 09 Feb 2021 14:27:44 +0800</pubDate>
-      
-      <guid>https://lorpaves.github.io/categories/notes/</guid>
       <description></description>
     </item><item>
       <title>Programming</title>
