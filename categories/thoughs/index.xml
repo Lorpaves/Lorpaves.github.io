@@ -1,0 +1,20 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thoughs - Lorpaves</title>
+    <link>https://lorpaves.github.io/categories/thoughs/</link>
+    <description>Recent content in Thoughs on Lorpaves</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Mar 2021 23:00:16 +0800</lastBuildDate>
+    
+        <atom:link href="https://lorpaves.github.io/categories/thoughs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>随记3-23</title>
+      <link>https://lorpaves.github.io/posts/%E6%97%A5%E8%AE%B0/</link>
+      <pubDate>Tue, 23 Mar 2021 23:00:16 +0800</pubDate>
+      
+      <guid>https://lorpaves.github.io/posts/%E6%97%A5%E8%AE%B0/</guid>
+      <description>真的好想过着每天无所事事，无聊到只有看书才能打发时间的日子。</description>
+    </item>
+  </channel>
+</rss>
