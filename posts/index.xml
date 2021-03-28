@@ -4,11 +4,18 @@
     <link>https://lorpaves.github.io/posts/</link>
     <description>Recent content in Posts on Lorpaves</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 23 Mar 2021 23:00:16 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 28 Mar 2021 22:50:35 +0800</lastBuildDate>
     
         <atom:link href="https://lorpaves.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>马原学习笔记4</title>
+      <link>https://lorpaves.github.io/posts/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%9A%84%E9%A9%AC%E5%8E%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 28 Mar 2021 22:50:35 +0800</pubDate>
+      
+      <guid>https://lorpaves.github.io/posts/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%9A%84%E9%A9%AC%E5%8E%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>关键词：矛盾、量变和质变、否定、实践</description>
+    </item><item>
       <title>随记3-23</title>
       <link>https://lorpaves.github.io/posts/%E6%97%A5%E8%AE%B0/</link>
       <pubDate>Tue, 23 Mar 2021 23:00:16 +0800</pubDate>
@@ -43,13 +50,6 @@
       
       <guid>https://lorpaves.github.io/posts/%E9%87%8F%E5%8C%96%E6%97%B6%E4%BB%A3-%E7%94%9F%E6%B4%BB%E5%9C%A8%E8%A3%82%E9%9A%99/</guid>
       <description>作者：立雯</description>
-    </item><item>
-      <title>马原学习笔记1</title>
-      <link>https://lorpaves.github.io/posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E7%9A%84%E9%A9%AC%E5%8E%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Sat, 06 Mar 2021 22:43:21 +0800</pubDate>
-      
-      <guid>https://lorpaves.github.io/posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E7%9A%84%E9%A9%AC%E5%8E%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
-      <description>我喜欢研究一个事物的历史发展，我就好像成为了旁观者，一个不存在于当时世界的、毫无价值的旁观者，我可以理解那个世界的状态及变化，我喜欢这种感觉，喜欢看到历史的人和物之间的联系。</description>
     </item>
   </channel>
 </rss>
