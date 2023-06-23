@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Goals</title>
-    <link>http://example.org/contact/</link>
+    <link>https://Lorpaves.github.io/contact/</link>
     <description>Recent content on Goals</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Jun 2023 23:09:27 +0800</lastBuildDate><atom:link href="http://example.org/contact/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Jun 2023 23:09:27 +0800</lastBuildDate><atom:link href="https://Lorpaves.github.io/contact/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact</title>
-      <link>http://example.org/contact/contact/</link>
+      <link>https://Lorpaves.github.io/contact/contact/</link>
       <pubDate>Fri, 23 Jun 2023 23:03:16 +0800</pubDate>
       
-      <guid>http://example.org/contact/contact/</guid>
+      <guid>https://Lorpaves.github.io/contact/contact/</guid>
       <description>Email: cshare001@outlook.com
 If there is any questions, please email me.</description>
     </item>

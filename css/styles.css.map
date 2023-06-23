@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "/Volumes/Apps/Goal-Website/Lorpaves.github.io",
+	"sourceRoot": "/Volumes/Apps/Goal-Website/12",
 	"sources": [
 		"themes/newsroom/assets/sass/main.sass",
 		"themes/newsroom/assets/sass/_variables.sass",
