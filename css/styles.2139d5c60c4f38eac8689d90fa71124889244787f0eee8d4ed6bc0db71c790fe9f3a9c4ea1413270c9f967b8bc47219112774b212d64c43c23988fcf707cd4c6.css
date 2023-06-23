@@ -2,15 +2,15 @@
 html {
   --color-mode: "lit";
   --light: #fff;
-  --dark: rgb(18,20,24);
+  --dark: #282626;
   --gray: #f5f5f5;
-  --bubble: rgb(16,16,18);
+  --bubble: rgb(40, 40, 40);
   --accent: var(--gray);
   --bg: var(--light);
-  --bg-dark: #000;
+  --bg-dark: #202020;
   --text: var(--dark);
   --font: 'Metropolis', sans-serif;
-  --theme: #00416A;
+  --theme: rgb(52, 73, 122);
   --ease: cubic-bezier(.19,1,.22,1);
 }
 
@@ -20,7 +20,7 @@ html[data-mode="dim"] {
   --bg: var(--bg-dark);
   --text: var(--light);
   --accent: var(--bubble);
-  --theme: #93B8D0;
+  --theme: rgb(151, 165, 186);
 }
 
 html[data-mode="dim"] * {
@@ -42,7 +42,7 @@ html[data-mode="dim"] .color_choice::after {
     --bg: var(--bg-dark);
     --text: var(--light);
     --accent: var(--bubble);
-    --theme: #93B8D0;
+    --theme: rgb(151, 165, 186);
   }
   html:not([data-mode="lit"]) * {
     box-shadow: none !important;
@@ -237,7 +237,7 @@ img {
   max-width: 100%;
   vertical-align: middle;
   height: auto;
-  margin: 1rem auto;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -756,8 +756,13 @@ aside h3 {
   width: 100%;
 }
 
+.post h1, .post h2, .post h3 {
+  text-align: center;
+  font-weight: 700;
+}
+
 .post p, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .post blockquote, .post ol, .post ul {
-  max-width: 840px !important;
+  max-width: 600px !important;
   margin-left: auto;
   margin-right: auto;
 }
@@ -923,10 +928,6 @@ aside h3 {
 .post_thumbnail {
   width: 100%;
   margin: 0;
-}
-
-.post_video {
-  width: 200px;
 }
 
 .post_nav {

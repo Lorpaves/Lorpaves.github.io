@@ -2,28 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Goals</title>
-    <link>https://Lorpaves.github.io/</link>
+    <link>https://lorpaves.github.io/</link>
     <description>Recent content on Goals</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Jun 2023 23:11:08 +0800</lastBuildDate><atom:link href="https://Lorpaves.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Jun 2023 05:03:43 +0800</lastBuildDate><atom:link href="https://lorpaves.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://lorpaves.github.io/post/privacy-policy/</link>
+      <pubDate>Sat, 24 Jun 2023 05:03:43 +0800</pubDate>
+      
+      <guid>https://lorpaves.github.io/post/privacy-policy/</guid>
+      <description>We take your privacy very seriously. This policy outlines how we collect, use, and protect your personal information. Information We Collect We only collect crash data. This data includes information about how you use our app, device information, and crash reports. We use this data to improve the performance and stability of our app. How We Use Your Information We use the data we collect to analyze user behavior and improve the performance of our app.</description>
+    </item>
+    
     <item>
       <title>Contact</title>
-      <link>https://Lorpaves.github.io/contact/contact/</link>
-      <pubDate>Fri, 23 Jun 2023 23:03:16 +0800</pubDate>
+      <link>https://lorpaves.github.io/contact/contact/</link>
+      <pubDate>Sat, 24 Jun 2023 04:42:39 +0800</pubDate>
       
-      <guid>https://Lorpaves.github.io/contact/contact/</guid>
+      <guid>https://lorpaves.github.io/contact/contact/</guid>
       <description>Email: cshare001@outlook.com
 If there is any questions, please email me.</description>
     </item>
     
     <item>
       <title>Goals Tutorial</title>
-      <link>https://Lorpaves.github.io/post/goals-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
-      <pubDate>Fri, 23 Jun 2023 15:39:45 +0800</pubDate>
+      <link>https://lorpaves.github.io/post/tutorial/</link>
+      <pubDate>Sat, 24 Jun 2023 04:38:16 +0800</pubDate>
       
-      <guid>https://Lorpaves.github.io/post/goals-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
-      <description>Create Your Goal Add Daily Todo to Your Goal Complete Your Daily Todo View Your Weekly Todo Data View Different Day of Your Todo </description>
+      <guid>https://lorpaves.github.io/post/tutorial/</guid>
+      <description>Create Your Goal Add Daily Todo to Your Goal Complete Your Daily Todo View Your Weekly Todo Data </description>
     </item>
     
   </channel>
